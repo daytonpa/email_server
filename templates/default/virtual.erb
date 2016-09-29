@@ -1,0 +1,13 @@
+# In this configuration, Postfix will bounce e-mails sent to addresses
+# not explicitly defined in this file. If you don't want that, though,
+# you can set up a catch-all alias that will route e-mail bound to
+# addresses that don't match any of the aliases.
+
+you@<%= node['email_server']['full_domain'] %>          you@<%= node['email_server']['full_domain'] %>
+postbot@<%= node['email_server']['full_domain'] %>      postbot@<%= node['email_server']['full_domain'] %>
+webmaster@<%= node['email_server']['full_domain'] %>    webmaster@<%= node['email_server']['full_domain'] %>
+postmaster@<%= node['email_server']['full_domain'] %>   webmaster@<%= node['email_server']['full_domain'] %>
+root@mail.<%= node['email_server']['full_domain'] %>    webmaster@<%= node['email_server']['full_domain'] %>
+root@<%= node['email_server']['full_domain'] %>         webmaster@<%= node['email_server']['full_domain'] %>
+abuse@<%= node['email_server']['full_domain'] %>        webmaster@<%= node['email_server']['full_domain'] %>
+hostmaster@<%= node['email_server']['full_domain'] %>   webmaster@<%= node['email_server']['full_domain'] %>
